@@ -9,12 +9,17 @@
         </v-col>
         <v-col md="8" lg="8" sm="11" cols="12">
           <v-container fluid>
-                <v-row v-for="(coc,i) in faqData" :key="i">
-                    <v-col md="6">
-                        <p style="color:#0005DF;font-size:120%" class="google-font mb-2">{{coc.question}}</p>
-                        <p>{{coc.answer}}</p>
-                    </v-col>
-                </v-row>
+            <v-row v-for="(coc, i) in faqData" :key="i">
+              <v-col md="6">
+                <p
+                  style="color: #0005df; font-size: 120%"
+                  class="google-font mb-2"
+                >
+                  {{ coc.question }}
+                </p>
+                <p v-html="coc.answer"></p>
+              </v-col>
+            </v-row>
           </v-container>
           <!-- <div v-for="(faq,i) in faqData" :key="i">
             <p class="my-0 google-font" style="color:#0005DF;font-size:105%">
